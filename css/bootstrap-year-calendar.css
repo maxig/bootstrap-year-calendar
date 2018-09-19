@@ -23,20 +23,15 @@
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  overflow: auto;
   direction: ltr;
+
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.calendar:after {
-	/* Apply the right height on the calendar div, even if the months elements are floating  */
-	clear: both;
-	content: "";
-	display:block;
 }
 
 .calendar.calendar-rtl {
@@ -57,7 +52,7 @@
   height: 20px;
   border: none;
   padding: 4px 5px;
-  font-size:12px;
+  font-size: 10px;
 }
 
 /* Header */
@@ -115,13 +110,16 @@
 
 /* Months */
 .calendar .months-container {
-	width:100%;
-	display:none;
+  /*display: inline;*/
+  width: max-content;
+	/*width: 100%;*/
+	/*display:none;*/
 }
 
 .calendar .month-container {
+	min-width:180px;
 	text-align:center;
-	height:200px;
+	/*height:200px;*/
 	padding:0;
 }
 
@@ -141,12 +139,6 @@
 .calendar table.month tr th
 {
 	padding:0;
-}
-
-.calendar table.month tr td.hidden,
-.calendar table.month tr th.hidden
-{
-	display:none;
 }
 
 .calendar table.month td.week-number {
@@ -172,7 +164,7 @@
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
-	padding: 5px 6px;
+	padding: 3px;
 }
 
 .table-striped .calendar table.month tr td,
