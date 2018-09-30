@@ -388,7 +388,7 @@
 					if(events.length == 1) {
 						weight = 4;
 					}
-					else if(events.length <= 3) {
+					else if(events.length <= 5) {
 						weight = 2;
 					}
 					else {
